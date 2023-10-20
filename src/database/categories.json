@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Bebidas alcohólicas"
+    },
+    {
+      "id": 2,
+      "name": "Bebidas no alcohólicas"
+    },
+    {
+      "id": 3,
+      "name": "Helados"
+    },
+    {
+      "id": 4,
+      "name": "Abarrotes"
+    },
+    {
+      "id": 5,
+      "name": "Panadería"
+    },
+    {
+      "id": 6,
+      "name": "Lácteos y huevos"
+    }
+  ]
+}

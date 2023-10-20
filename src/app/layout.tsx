@@ -1,12 +1,16 @@
 import type {Metadata} from 'next'
 import {Montserrat} from 'next/font/google'
-import './globals.css'
+import './globals.css';
+import './animate.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "@/components/header";
 import ThemeContext from "@/context/ThemeContext";
+import GlobalProvider from "@/context/GlobalContext";
 
 const montserrat = Montserrat({
     subsets: ['latin'],
     weight: ['400', '500', '600', '700'],
+    variable: '--font-montserrat',
 });
 
 export const metadata: Metadata = {
@@ -15,12 +19,15 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
+
     return (
         <html lang="es">
         <body className={montserrat.className}>
         <ThemeContext>
-            <Header/>
-            {children}
+            <GlobalProvider>
+                <Header/>
+                {children}
+            </GlobalProvider>
         </ThemeContext>
         </body>
         </html>
